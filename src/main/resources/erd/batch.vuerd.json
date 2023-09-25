@@ -1,0 +1,504 @@
+{
+  "canvas": {
+    "version": "2.2.11",
+    "width": 2000,
+    "height": 2000,
+    "scrollTop": -5.333333333333333,
+    "scrollLeft": 0,
+    "zoomLevel": 1,
+    "show": {
+      "tableComment": true,
+      "columnComment": true,
+      "columnDataType": true,
+      "columnDefault": true,
+      "columnAutoIncrement": false,
+      "columnPrimaryKey": true,
+      "columnUnique": false,
+      "columnNotNull": true,
+      "relationship": true
+    },
+    "database": "MySQL",
+    "databaseName": "coder",
+    "canvasType": "ERD",
+    "language": "GraphQL",
+    "tableCase": "pascalCase",
+    "columnCase": "camelCase",
+    "highlightTheme": "VS2015",
+    "bracketType": "none",
+    "setting": {
+      "relationshipDataTypeSync": true,
+      "relationshipOptimization": false,
+      "columnOrder": [
+        "columnName",
+        "columnDataType",
+        "columnNotNull",
+        "columnUnique",
+        "columnAutoIncrement",
+        "columnDefault",
+        "columnComment"
+      ]
+    },
+    "pluginSerializationMap": {}
+  },
+  "table": {
+    "tables": [
+      {
+        "name": "SY_BTCH_MNGR_INFO",
+        "comment": "배치관리자정보",
+        "columns": [
+          {
+            "name": "BTCH_ID",
+            "comment": "배치아이디",
+            "dataType": "VARCHAR(100)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 67,
+              "widthDataType": 89.29296875,
+              "widthDefault": 60
+            },
+            "id": "49f2d39e-0cca-4e33-88bd-929fff46b29c"
+          },
+          {
+            "name": "BTCH_NM",
+            "comment": "배치명",
+            "dataType": "VARCHAR(100)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60.34130859375,
+              "widthComment": 60,
+              "widthDataType": 89.29296875,
+              "widthDefault": 60
+            },
+            "id": "7b7e1d06-950e-4b5c-8957-d3bf8bcd5cc2"
+          },
+          {
+            "name": "BTCH_DESC",
+            "comment": "배치설명",
+            "dataType": "NVARCHAR(200)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 69.8310546875,
+              "widthComment": 60,
+              "widthDataType": 99.23974609375,
+              "widthDefault": 60
+            },
+            "id": "a1c5eb95-e999-4844-90cd-1f211281ce4b"
+          },
+          {
+            "name": "BTCH_JOB_CLS_NM",
+            "comment": "배치잡클래스명",
+            "dataType": "VARCHAR(200)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 115.2802734375,
+              "widthComment": 93,
+              "widthDataType": 89.29296875,
+              "widthDefault": 60
+            },
+            "id": "6f368cc2-ff61-4130-b29f-67fca98571d6"
+          },
+          {
+            "name": "EXE_EXCL_BGN_TM",
+            "comment": "실행제외시작시간",
+            "dataType": "DATETIME",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 114.35986328125,
+              "widthComment": 106,
+              "widthDataType": 61.42041015625,
+              "widthDefault": 60
+            },
+            "id": "ae4069f3-8340-4129-b89b-2eda1638f36b"
+          },
+          {
+            "name": "EXE_EXCL_END_TM",
+            "comment": "실행제외종료시간",
+            "dataType": "DATETIME",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 113.69970703125,
+              "widthComment": 106,
+              "widthDataType": 61.42041015625,
+              "widthDefault": 60
+            },
+            "id": "2d5c2e80-540e-47da-828e-25514a41f6b6"
+          },
+          {
+            "name": "CRON_EXPR",
+            "comment": "크론표현식",
+            "dataType": "VARCHAR(20)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 73.51904296875,
+              "widthComment": 67,
+              "widthDataType": 82.1328125,
+              "widthDefault": 60
+            },
+            "id": "ed769b3c-b36a-4ca5-b202-de86ca9a091d"
+          },
+          {
+            "name": "BTCH_PARM",
+            "comment": "배치파라미터",
+            "dataType": "NVARCHAR(200)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 73.21435546875,
+              "widthComment": 80,
+              "widthDataType": 99.23974609375,
+              "widthDefault": 60
+            },
+            "id": "fcb6167f-b765-40bf-ad34-6ea37078a282"
+          },
+          {
+            "name": "ERR_TRNS_MTH_CD",
+            "comment": "오류전달방법코드",
+            "dataType": "VARCHAR(20)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 118.9111328125,
+              "widthComment": 106,
+              "widthDataType": 82.1328125,
+              "widthDefault": 60
+            },
+            "id": "ea309997-4ba7-4697-9ab5-a084e838956f"
+          },
+          {
+            "name": "USE_YN",
+            "comment": "사용여부",
+            "dataType": "CHAR(1)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "146b4380-dbf7-4563-9ce5-813f7600c99c"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 41.3329,
+          "top": 45.3317,
+          "zIndex": 7,
+          "widthName": 132.837890625,
+          "widthComment": 93
+        },
+        "visible": true,
+        "id": "27700c6c-f320-4be9-8693-d051f7f45d42"
+      },
+      {
+        "name": "SY_BTCH_EXE_LOG",
+        "comment": "배치실행로그",
+        "columns": [
+          {
+            "name": "BTCH_NM",
+            "comment": "배치명",
+            "dataType": "VARCHAR(100)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60.34130859375,
+              "widthComment": 60,
+              "widthDataType": 89.29296875,
+              "widthDefault": 60
+            },
+            "id": "45ce554e-503a-4bde-b5a6-4168d74948dc"
+          },
+          {
+            "name": "BTCH_EXE_NUM",
+            "comment": "배치실행번호",
+            "dataType": "BIGINT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 96.326171875,
+              "widthComment": 80,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "68402e62-2bf6-45c0-8488-7dee3ada3c66"
+          },
+          {
+            "name": "ERR_YN",
+            "comment": "오류여부",
+            "dataType": "CHAR(1)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "a72ece0f-1336-40fd-b1ac-f124f00b3cb5"
+          },
+          {
+            "name": "BTCH_EXE_TM",
+            "comment": "배치실행시간",
+            "dataType": "DATETIME",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 84.18310546875,
+              "widthComment": 80,
+              "widthDataType": 61.42041015625,
+              "widthDefault": 60
+            },
+            "id": "cffba10f-be19-44f6-af8d-62079c18a7a7"
+          },
+          {
+            "name": "BTCH_ERR_LOG",
+            "comment": "배치오류로그",
+            "dataType": "NVARCHAR(2500)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 91.52099609375,
+              "widthComment": 80,
+              "widthDataType": 106.39990234375,
+              "widthDefault": 60
+            },
+            "id": "6c088890-ce28-4c3f-af23-e6e24f1db62a"
+          },
+          {
+            "name": "BTCH_RSLT_TRNS_TM",
+            "comment": "오류전달시간",
+            "dataType": "DATETIME",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 127.66455078125,
+              "widthComment": 80,
+              "widthDataType": 61.42041015625,
+              "widthDefault": 60
+            },
+            "id": "5ec3c661-54dc-4cd4-bc96-2aded6c8fff4"
+          },
+          {
+            "name": "BTCH_ID",
+            "comment": "배치아이디",
+            "dataType": "VARCHAR(100)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 67,
+              "widthDataType": 89.29296875,
+              "widthDefault": 60
+            },
+            "id": "f357e72a-45de-477a-976e-f43a7ae38690"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 46.6674,
+          "top": 458.0008,
+          "zIndex": 9,
+          "widthName": 110.1767578125,
+          "widthComment": 80
+        },
+        "visible": true,
+        "id": "d58fe162-5688-4416-a089-07645a373f60"
+      }
+    ],
+    "indexes": []
+  },
+  "memo": {
+    "memos": []
+  },
+  "relationship": {
+    "relationships": [
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "27700c6c-f320-4be9-8693-d051f7f45d42",
+          "columnIds": [
+            "49f2d39e-0cca-4e33-88bd-929fff46b29c"
+          ],
+          "x": 286.908339453125,
+          "y": 319.3317,
+          "direction": "bottom"
+        },
+        "end": {
+          "tableId": "d58fe162-5688-4416-a089-07645a373f60",
+          "columnIds": [
+            "f357e72a-45de-477a-976e-f43a7ae38690"
+          ],
+          "x": 287.1996265625,
+          "y": 458.0008,
+          "direction": "top"
+        },
+        "constraintName": "fk_sy_btch_mngr_info_to_sy_btch_exe_log",
+        "visible": true,
+        "id": "d521b164-05ca-4bc4-b95d-7035b2821bba"
+      }
+    ]
+  }
+}

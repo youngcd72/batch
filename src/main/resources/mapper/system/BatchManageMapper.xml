@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.or.coder.app.cmm.mapper.system.BatchManageMapper">
+
+    <!-- 배치관리 목록 데이터 조회 -->
+    <select id="selectBatchManageInfo" parameterType="map" resultType="kr.or.coder.app.cmm.model.BatchManager">
+        /* BatchManageMapper.selectBatchManageInfo */
+        SELECT BTCH_ID,         BTCH_NM,         BTCH_JOB_CLS_NM, 
+               EXE_EXCL_BGN_TM, EXE_EXCL_END_TM, CRON_EXPR,   
+               BTCH_PARM,       ERR_TRNS_MTH_CD
+          FROM SY_BTCH_EXE_LOG  WITH(NOLOCK)
+         WHERE BTCH_NM = #{batchNm}
+           AND USE_YN = 'Y' 
+    </select>
+
+    <!-- 배치관리 목록 데이터 조회 -->
+    <select id="selectBatchManageList" resultType="kr.or.coder.app.cmm.model.BatchManager">
+        /* BatchManageMapper.selectBatchManageInfo */
+        SELECT BTCH_ID,         BTCH_NM,           BTCH_JOB_CLS_NM,
+               EXE_EXCL_BGN_TM, EXE_EXCL_END_TM,   CRON_EXPR,   
+               BTCH_PARM,       ERR_TRNS_MTH_CD
+          FROM SY_BTCH_EXE_LOG  WITH(NOLOCK)
+         WHERE USE_YN = 'Y' 
+    </select>
+    
+    <!-- 배치 로그 등록 -->
+    <insert id="insertBatchExeLog" parameterType="kr.or.coder.common.log.BatchExeLog">
+        /* BatchManageMapper.insertBatchExeLog */
+        INSERT INTO SY_BTCH_EXE_LOG (
+            BTCH_NM,     BTCH_EXE_ID,  ERR_AT,
+            BTCH_EXE_TM, BTCH_EXE_LOG, BTCH_ERR_LOG
+        ) VALUES (
+            #{jobName},        #{jobId},         #{errYn},
+            GETDATE(),         #{exeLog},        #{errLog}
+        )
+    </insert>
+</mapper>

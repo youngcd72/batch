@@ -1,0 +1,110 @@
+#####################################################################
+# 공통영역 (Common area)
+#####################################################################
+server:
+  port: 8020
+
+spring:
+  application:
+    name: Batch
+  profiles:
+    active: local
+
+logging:
+  config: classpath:logback-spring.xml
+
+---
+#####################################################################
+# 로컬영역 (local area)
+#####################################################################
+spring:
+  config:
+    activate:
+      on-profile: local
+
+org:
+  quartz:
+    scheduler:
+      instanceName: batch
+    threadPool:
+      threadCount: 2
+
+database:
+  datasource:
+    system: 
+      driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+      url: jdbc:log4jdbc:sqlserver://localhost:1433;database=batch;encrypt=true;trustServerCertificate=true
+      username: coder
+      password: coder@2023#
+      config-location: classpath:mapper/config/mapper-config.xml
+      mapper-location: classpath*:mapper/mssql/**/*Mapper.xml
+      hikari:
+        connection-timeout: 3000
+        validation-timeout: 3000
+        minimum-idle: 1
+        max-lifetime: 240000
+        maximum-pool-size: 2
+
+---
+#####################################################################
+# 개발영역 (dev area)
+#####################################################################
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+org:
+  quartz:
+    scheduler:
+      instanceName: batch
+    threadPool:
+      threadCount: 2
+
+database:
+  datasource:
+    system: 
+      driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+      url: jdbc:log4jdbc:sqlserver://localhost:1433;database=batch;encrypt=true;trustServerCertificate=true
+      username: coder
+      password: coder@2023#
+      config-location: classpath:mapper/config/mapper-config.xml
+      mapper-location: classpath:mapper/mssql/**/*Mapper.xml
+      hikari:
+        connection-timeout: 3000
+        validation-timeout: 3000
+        minimum-idle: 1
+        max-lifetime: 240000
+        maximum-pool-size: 2
+
+---
+#####################################################################
+# 운영영역 (prod area)
+#####################################################################
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+org:
+  quartz:
+    scheduler:
+      instanceName: batch
+    threadPool:
+      threadCount: 5
+
+database:
+  datasource:
+    system: 
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      url: jdbc:sqlserver://localhost:1433;database=batch;encrypt=true;trustServerCertificate=true
+      username: coder
+      password: coder@2023#
+      config-location: classpath:mapper/config/mapper-config.xml
+      mapper-location: classpath:mapper/system/**/*Mapper.xml
+      hikari:
+        connection-timeout: 3000
+        validation-timeout: 3000
+        minimum-idle: 2
+        max-lifetime: 240000
+        maximum-pool-size: 5
